@@ -9,6 +9,8 @@ Build-Depends: debhelper-compat (= 13),
                libandroid-properties-dev,
                zlib1g-dev,
                libgles2-mesa-dev,
+               binutils,
+               patchelf,
 Standards-Version: 4.5.0.3
 Vcs-Browser: https://github.com/furilabs/halium-wrappers
 Vcs-Git: https://github.com/furilabs/halium-wrappers.git
