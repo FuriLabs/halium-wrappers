@@ -43,3 +43,6 @@ override_dh_install:
 	# Create the furios-workarounds flatpak extension
 	mkdir -p $(CURDIR)/debian/flatpak-extension-gl-hybris-furios-workarounds/$(FLATPAK_EXTENSION_TARGET)
 	cp -Ra $(CURDIR)/debian/libfurios-workarounds/$(libdir)/* $(CURDIR)/debian/flatpak-extension-gl-hybris-furios-workarounds/$(FLATPAK_EXTENSION_TARGET)
+
+	# Strip recent glibc symbols on the flatpak extension
+	find $(CURDIR)/debian/flatpak-extension-gl-hybris-furios-workarounds/$(FLATPAK_EXTENSION_TARGET) -type f -name \*.so\* -exec $(CURDIR)/debian/clear_symbols.sh \{\} \;
