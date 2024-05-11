@@ -1,5 +1,5 @@
 Source: halium-wrappers
-Maintainer: Eugenio Paolantonio (g7) <me@medesimo.eu>
+Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
 Section: misc
 Priority: optional
 Build-Depends: debhelper (>= 10),
@@ -10,8 +10,8 @@ Build-Depends: debhelper (>= 10),
                zlib1g-dev,
                libgles2-mesa-dev,
 Standards-Version: 4.5.0.3
-Vcs-Browser: https://github.com/droidian/halium-wrappers
-Vcs-Git: https://github.com/droidian/halium-wrappers.git
+Vcs-Browser: https://github.com/furilabs/halium-wrappers
+Vcs-Git: https://github.com/furilabs/halium-wrappers.git
 
 Package: halium-wrappers
 Architecture: any
@@ -47,26 +47,26 @@ Description: tls-padding library shipped for the org.freedesktop.Platform.GL hyb
  If you use libtls-padding0 and flatpak, it might be a good idea
  installing this.
 
-Package: libdroidian-workarounds
+Package: libfurios-workarounds
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends}
-Description: Various workarounds for Droidian-specific workloads
- This package contains various workarounds for Droidian-specific
+Description: Various workarounds for FuriOS-specific workloads
+ This package contains various workarounds for FuriOS-specific
  workloads. Currently it ships a library that workarounds gtk bug #6216, as well
  as a library that caches GLESv2 shader programs.
 
-Package: flatpak-extension-gl-hybris-droidian-workarounds
+Package: flatpak-extension-gl-hybris-furios-workarounds
 # We're tied to the architecture supported by libhybris+flatpak
 Architecture: amd64 arm64 armhf i386
 # hard dependencies are not really needed since we're going to
 # copy the libraries anyway, but it's good to avoid eventual desyncs
 Depends: ${misc:Depends},
          flatpak-extension-gl-hybris,
-         libdroidian-workarounds (= ${binary:Version}),
-Description: Droidian-specific workarounds shipped for the org.freedesktop.Platform.GL hybris runtime extension
- This package contains the libraries in libdroidian-workarounds shipped
+         libfurios-workarounds (= ${binary:Version}),
+Description: FuriOS-specific workarounds shipped for the org.freedesktop.Platform.GL hybris runtime extension
+ This package contains the libraries in libfurios-workarounds shipped
  inside the hybris extension for flatpak's org.freedesktop.platform.GL runtime.
  .
- If you use libdroidian-workarounds and flatpak, it might be a good idea
+ If you use libfurios-workarounds and flatpak, it might be a good idea
  installing this.

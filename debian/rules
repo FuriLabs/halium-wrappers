@@ -40,6 +40,6 @@ override_dh_install:
 	mkdir -p $(CURDIR)/debian/flatpak-extension-gl-hybris-tls-padding/$(FLATPAK_EXTENSION_TARGET)
 	cp -Ra $(CURDIR)/debian/libtls-padding0/$(libdir)/* $(CURDIR)/debian/flatpak-extension-gl-hybris-tls-padding/$(FLATPAK_EXTENSION_TARGET)
 
-	# Create the droidian-workarounds flatpak extension
-	mkdir -p $(CURDIR)/debian/flatpak-extension-gl-hybris-droidian-workarounds/$(FLATPAK_EXTENSION_TARGET)
-	cp -Ra $(CURDIR)/debian/libdroidian-workarounds/$(libdir)/* $(CURDIR)/debian/flatpak-extension-gl-hybris-droidian-workarounds/$(FLATPAK_EXTENSION_TARGET)
+	# Create the furios-workarounds flatpak extension
+	mkdir -p $(CURDIR)/debian/flatpak-extension-gl-hybris-furios-workarounds/$(FLATPAK_EXTENSION_TARGET)
+	cp -Ra $(CURDIR)/debian/libfurios-workarounds/$(libdir)/* $(CURDIR)/debian/flatpak-extension-gl-hybris-furios-workarounds/$(FLATPAK_EXTENSION_TARGET)
