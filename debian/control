@@ -2,7 +2,7 @@ Source: halium-wrappers
 Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
 Section: misc
 Priority: optional
-Build-Depends: debhelper (>= 10),
+Build-Depends: debhelper-compat (= 13),
                pkg-config,
                libhybris-dev,
                libhybris-common-dev,
