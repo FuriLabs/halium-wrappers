@@ -18,7 +18,7 @@ Vcs-Git: https://github.com/furilabs/halium-wrappers.git
 Package: halium-wrappers
 Architecture: any
 Multi-Arch: foreign
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, ${shlibs:Depends},
          util-linux
 Description: Convenience wrappers to Android utilities
  This package provides some convenience wrappers to
@@ -52,7 +52,7 @@ Description: tls-padding library shipped for the org.freedesktop.Platform.GL hyb
 Package: libfurios-workarounds
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Various workarounds for FuriOS-specific workloads
  This package contains various workarounds for FuriOS-specific
  workloads. Currently it ships a library that workarounds gtk bug #6216, as well
@@ -63,7 +63,7 @@ Package: flatpak-extension-gl-hybris-furios-workarounds
 Architecture: amd64 arm64 armhf i386
 # hard dependencies are not really needed since we're going to
 # copy the libraries anyway, but it's good to avoid eventual desyncs
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, ${shlibs:Depends},
          flatpak-extension-gl-hybris,
          libfurios-workarounds (= ${binary:Version}),
 Description: FuriOS-specific workarounds shipped for the org.freedesktop.Platform.GL hybris runtime extension
