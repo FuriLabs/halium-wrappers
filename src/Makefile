@@ -30,13 +30,10 @@ waitforservice: waitforservice.c
 libtls-padding.so: libtls-padding.c
 	$(CC) -shared $< -o $@
 
-libgtk6216workaround.so: gtk6216workaround.c
-	$(CC) -shared $< -o $@
-
 libglesshadercache.so: glesshadercache.c
 	$(CC) -fPIC -shared $< -o $@ $(GLESSHADERCACHE_LIBS)
 
-install: waitforservice libtls-padding.so libglesshadercache.so libgtk6216workaround.so halium-lxc-exec.sh android-service.sh systemd/android-service@.service systemd/android-service@hwcomposer.service.d/10-hwcomposer.conf
+install: waitforservice libtls-padding.so libglesshadercache.so halium-lxc-exec.sh android-service.sh systemd/android-service@.service systemd/android-service@hwcomposer.service.d/10-hwcomposer.conf
 	install -d $(DESTDIR)/usr/bin
 	install -d $(DESTDIR)/usr/sbin
 	install -d $(DESTDIR)/usr/lib/halium-wrappers
@@ -45,7 +42,6 @@ install: waitforservice libtls-padding.so libglesshadercache.so libgtk6216workar
 	install -d $(DESTDIR)/usr/lib/systemd/system/android-service@hwcomposer.service.d
 	install -m 755 waitforservice $(DESTDIR)/usr/bin
 	install -m 4644 libtls-padding.so $(DESTDIR)/usr/lib/$(TRIPLET)
-	install -m 4644 libgtk6216workaround.so $(DESTDIR)/usr/lib/$(TRIPLET)
 	install -m 4644 libglesshadercache.so $(DESTDIR)/usr/lib/$(TRIPLET)
 	install -m 755 halium-lxc-exec.sh $(DESTDIR)/usr/lib/halium-wrappers
 	install -m 755 android-service.sh $(DESTDIR)/usr/lib/halium-wrappers

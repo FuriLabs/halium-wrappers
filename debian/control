@@ -55,8 +55,7 @@ Multi-Arch: same
 Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Various workarounds for FuriOS-specific workloads
  This package contains various workarounds for FuriOS-specific
- workloads. Currently it ships a library that workarounds gtk bug #6216, as well
- as a library that caches GLESv2 shader programs.
+ workloads. Currently a library that caches GLESv2 shader programs.
 
 Package: flatpak-extension-gl-hybris-furios-workarounds
 # We're tied to the architecture supported by libhybris+flatpak
