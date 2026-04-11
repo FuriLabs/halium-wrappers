@@ -1,1 +1,2 @@
 /usr/lib/*/libglesshadercache.so
+/usr/lib/*/libegl_platform_base_shim.so
